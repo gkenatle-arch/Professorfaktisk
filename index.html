@@ -1,57 +1,164 @@
-<!DOCTYPE html>
-<html lang="no">
+<!DOCTYPE html><html lang="no">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Professor Faktisk</title>
+<meta name="description" content="Den store oppdageren Professor Faktisk på dinosaurutgraving">
 <style>
+*{box-sizing:border-box}
 body{
 margin:0;
-font-family:Arial,sans-serif;
-background:linear-gradient(135deg,#dbeafe,#fef3c7,#fde68a);
-text-align:center;
-padding:40px;
+font-family:Arial, Helvetica, sans-serif;
 color:#111;
+background:linear-gradient(135deg,#dbeafe,#fef3c7,#fde68a);
+line-height:1.5;
+}
+.container{
+max-width:1100px;
+margin:auto;
+padding:24px;
+}
+.hero{
+display:grid;
+grid-template-columns:1fr;
+gap:24px;
+align-items:center;
+padding:30px 0;
+}
+@media(min-width:900px){
+.hero{grid-template-columns:1.1fr .9fr;}
 }
 .card{
-background:white;
-padding:30px;
-border-radius:24px;
-max-width:700px;
-margin:auto;
-box-shadow:0 10px 30px rgba(0,0,0,.1);
+background:#fff;
+border-radius:28px;
+padding:28px;
+box-shadow:0 14px 40px rgba(0,0,0,.08);
+}
+h1{
+font-size:56px;
+line-height:1;
+margin:10px 0;
+}
+@media(max-width:700px){
+h1{font-size:40px;}
+}
+h2{
+font-size:32px;
+margin:0 0 10px;
+}
+.badge{
+display:inline-block;
+padding:8px 14px;
+background:#fff;
+border-radius:999px;
+font-weight:bold;
+box-shadow:0 6px 20px rgba(0,0,0,.08);
+}
+.sub{
+font-size:24px;
+margin:0 0 10px;
+}
+.muted{
+color:#555;
+}
+.ghost{
+font-size:130px;
+text-align:center;
+margin:10px 0;
 }
 .rainbow{
-height:16px;
+height:18px;
 border-radius:999px;
 background:linear-gradient(90deg,red,orange,yellow,green,blue,indigo,violet);
-margin:20px 0;
+margin:16px auto;
+max-width:320px;
+box-shadow:0 0 20px rgba(255,255,255,.7);
 }
-a{
+.btns{
+display:flex;
+gap:12px;
+flex-wrap:wrap;
+margin-top:18px;
+}
+.btn{
 display:inline-block;
-margin-top:20px;
 padding:14px 22px;
-background:#111;
-color:white;
+border-radius:16px;
 text-decoration:none;
-border-radius:14px;
+font-weight:bold;
+transition:.2s;
+}
+.btn:hover{transform:translateY(-2px)}
+.primary{
+background:#111827;
+color:#fff;
+}
+.secondary{
+background:#fff;
+color:#111;
+border:2px solid #111;
+}
+.grid{
+display:grid;
+grid-template-columns:1fr;
+gap:18px;
+margin-top:24px;
+}
+@media(min-width:900px){
+.grid{grid-template-columns:repeat(3,1fr);}
+}
+.feature{
+background:#fff;
+padding:22px;
+border-radius:24px;
+box-shadow:0 10px 24px rgba(0,0,0,.06);
+}
+.section{
+margin-top:26px;
+}
+.center{text-align:center}
+footer{
+margin-top:40px;
+padding:30px 0;
+text-align:center;
+color:#555;
 }
 </style>
 </head>
-<body>
-
-<div class="card">
-<h1>Professor Faktisk</h1>
-<p>Den store oppdageren på dinosaurutgraving</p>
-
-<div style="font-size:120px;">👻</div>
-
-<div class="rainbow"></div>
-
-<p>En magisk og lærerik barnebok full av eventyr og dinosaurer.</p>
-
-<a href="#">Les boken snart</a>
+<body><div class="container"><div class="hero"><div>
+<div class="badge">🌍 professorfaktisk.no</div><h1>Professor Faktisk</h1><p class="sub">Den store oppdageren på dinosaurutgraving</p><p class="muted">
+En magisk og lærerik barnebok full av eventyr, dinosaurer og oppdagelser.
+</p><div class="btns">
+<a class="btn primary" href="#book">📚 Les utdrag</a>
+<a class="btn secondary" href="#buy">🛒 Kjøp snart</a>
 </div>
-
-</body>
+</div><div class="card center">
+<div class="ghost">👻</div>
+<div class="rainbow"></div>
+<h2>På dinosaurutgraving</h2>
+<p class="muted">Av Ken Atle Gundersen</p>
+</div></div><div class="grid">
+<div class="feature">
+<h3>🦖 Lærerik</h3>
+<p>Barna lærer om dinosaurer, fossiler og oppdagelser.</p>
+</div><div class="feature">
+<h3>🌈 Magisk</h3>
+<p>Professor Faktisk sprer glede med regnbueglød og eventyrlyst.</p>
+</div><div class="feature">
+<h3>📱 Enkel</h3>
+<p>Perfekt på mobil, nettbrett og datamaskin.</p>
+</div>
+</div><div id="book" class="card section">
+<h2>📖 Les utdrag</h2>
+<p>Professor Faktisk pakker sekken og gjør seg klar.</p>
+<p>Han flyr til Canada for å besøke Dinosaur Provincial Park.</p>
+<p>Plutselig dukker et stort fossil opp av bakken ...</p>
+<p><strong>Kan det være en Albertosaurus?</strong></p>
+</div><div id="buy" class="card section center">
+<h2>🛒 Kjøp boken snart</h2>
+<p>Paperback og e-bok kommer.</p>
+<p>Følg med for lansering!</p>
+</div><footer>
+© Professor Faktisk
+</footer></div></body>
 </html>
